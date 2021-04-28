@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+    <body>
+
+        <div class="container" style="background-image: url('images/pexels-artur-roman-539711.jpg')">
+            <div class="row"> 
+
+                <div class="col-5">
+                    <h6></h6>
+                    <button type="button"  id="currentLocation">Current Location</button>
+                </div><!--col-->
+                
+                <div class="col-7">    
+                    <div class="search" style="margin-right: 21%;">
+                        <label for="searchBar" class="question">
+                            <h2 style="font-size: 120%;"><strong>Which city are you looking for?</strong> </h2>
+                        </label>
+    
+                        <form id="searchForm" class="searchForm">
+                            <input type="search"  placeholder="Type a city" name="search" class="searchBar" id = "searchResult" autofocus="on"/>
+                            <input type="submit" value="Search" id=searchButton /> 
+                        </form>    
+                    </div><!--search-->
+                </div> <!--col-->
+            </div>  <!--row-->
+
+
+    <div class = middle>
+        <div class="row justify-content-center  align-items-center">
+            <div class="col-sm-4">
+                        <div class="temperature">    
+                            <h3 id="resultCity" style="font-size: 133%;"></h3>
+                            <h5 id="resultTemperature" class = "resultTemp"></h5>
+                            <span class="units" style="font-size: 91%;"> (<a href="#" id="Fahrenheit">°F</a>|<a href="#" id="Celsius">°C</a>)</span>
+                        </div><!--temperature-->
+                            <img src="images/sunny.png" class="img">
+            </div> <!--col-->
+    
+            <div class="col-sm-4">
+                <div class="tomorrow-txt">
+                    <strong>Tomorrow 7°C</strong>
+                    <img src="images/clouds.png" class="img" >
+                </div> <!--tomorrow-txt-->
+            </div> <!--col-->
+        </div><!--row-->
+    </div><!--middle-->
+       
+<div class="p-forecast">
+        <div class="row">
+                    <div class="col">
+                        Monday
+                        <br>
+                        <strong> 8°C</strong>
+                            <br>
+                            <img src="images/clouds_rain.png" class="img-fluid">
+                    </div> <!--col-->
+
+                    <div class="col">
+                        Tuesday
+                        <br>
+                        <strong> 9°C</strong>
+                            <br>
+                            <img src="images/clouds.png" class="img-fluid">
+                    </div><!--col-->
+
+                    <div class="col">
+                        Wednesday
+                        <br>
+                        <strong> 10°C</strong>
+                            <br>
+                            <img src="images/sun_clouds.png" class="img-fluid">
+                    </div><!--col-->
+
+                    <div class="col">
+                        Thursday
+                        <br>
+                        <strong> 11°C</strong>
+                            <br>
+                            <img src="images/sunny.png" class="img-fluid">
+                    </div><!--col-->
+
+                    <div class="col">
+                        Friday
+                        <br>
+                        <strong> 12°C</strong>
+                            <br>
+                            <img src="images/sun_clouds.png" class="img-fluid">
+                    </div><!--col-->
+         </div><!--row-->
+    </div>
+        <br>
+
+</div>
+
+        <script src="src/app.js"></script>
+</body>
+</html>
+
+
