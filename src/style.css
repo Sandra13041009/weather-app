@@ -18,9 +18,13 @@
 
    #currentLocation{
         height: 37px;
-        width: 35px;
+        width: 40px;
         background-color: slategray;
         border:none;
+        margin-left: 17px;
+        color: white;
+        border-radius: 5px;
+        float: right;
     }
 
     li{
@@ -37,7 +41,7 @@
     .searchForm {
         position: relative;
         overflow: hidden;
-        padding-bottom: 10px
+        padding-bottom: 15px;
     }
 
     .searchBar {
@@ -49,12 +53,12 @@
 
     #searchButton {
         height: 37px;
-        width: 50px;
+        width: 40px;
         background-color: slategray;
         border: none;
-        padding-right: 13px;
-        margin-right: 13px;
-        font-size: white;}
+        border-radius: 0px 5px 5px 0;
+        font-size: white;
+    }
         
 
 
