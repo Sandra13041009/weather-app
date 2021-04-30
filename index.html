@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Weather Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="src/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container" style="background-image: url('images/pexels-artur-roman-539711.jpg')">
+
+        <div class="row">
+                <div class="col-3"> 
+                    <h6 style="font-weight: bold"></h6>  
+                </div><!--col-->
+
+            <div class="col-9">
+                <div class="search" style="margin-right: 21%;">
+                    <label for="searchBar" class="question">
+                        <h2 style="font-size: 120%;">Which city are you looking for?</h2>
+                    </label>
+
+                    <div class="input-group" id="searchForm">
+                        <input type="search" class="form-control rounded" autofocus="on" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="searchResult"/>
+                        <button id="searchButton" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+
+                        <button type="button" id="currentLocation"><i class="fas fa-street-view"></i></button>
+                    </div><!--input-group-->
+                </div><!--search-->
+            </div><!--col-->
+    </div><!--row-->
+  
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-6">
+                <div class="temperature">   
+                    <img src="images/sunny.png" alt="Clear" class="IMG"/>
+                        <ul style="padding-top: 13px;">
+                            <li id="resultCity">Paris</li>
+                            <li id="resultTemperature" class="resultTemp">13</li>
+                            <li id="description">Clear Sky</li>
+                        </ul>
+                </div><!--temperature-->
+            </div><!--col-->
+            
+            <div class="col-6">
+                <div class="tomorrow-txt">
+                    <strong>Tomorrow 7°C</strong>
+                    <img src="images/clouds.png" class="IMG"/>
+                </div><!--tomorrow-txt-->
+            </div><!--col-->
+        </div><!--row-->
+
+
+
+
+
+
+        <div class="p-forecast">
+            <div class="row">
+                <div class="col">Monday<br>
+                    <strong>8°C</strong><br>
+                    <img class="img-fluid" src="images/clouds_rain.png">
+                </div>
+                <!--col-->
+                <div class="col">Tuesday<br>
+                    <strong>9°C</strong><br>
+                    <img class="img-fluid" src="images/clouds.png">
+                </div>
+                <!--col-->
+                <div class="col">Wednesday<br>
+                    <strong>10°C</strong><br>
+                    <img class="img-fluid" src="images/sun_clouds.png">
+                </div>
+                <!--col-->
+                <div class="col">Thursday<br>
+                    <strong>11°C</strong><br>
+                    <img class="img-fluid" src="images/sunny.png">
+                </div>
+                <!--col-->
+                <div class="col">Friday<br>
+                    <strong>12°C</strong><br>
+                    <img class="img-fluid" src="images/sun_clouds.png">
+                </div><!--col-->
+            </div><!--row-->
+        </div><br>
+
+</div>
+    <small class="link"><a href="https://github.com/Sandra13041009/Weather_App" target="_blank">Open-source code</a>
+            by Sandra Horn</small>
+    </div>
+    <script src="src/app.js"></script>
+</body>
+</html>
+
+

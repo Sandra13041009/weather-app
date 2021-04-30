@@ -1,38 +1,43 @@
 
     .container {
-        width: 53%;
-        padding-top: 51px;
+        width: 600px;
+        padding-top: 30px;
         display: block;
-        margin: 130px auto;
+        margin-top: 30px;
         text-align: center;
         background-size: cover;
         font-family: 'Nunito Sans', sans-serif;
-        border: solid black;
-        border-radius: 7%;
+        border: solid rgba(139, 138, 138, 0.842);
+        border-radius: 3%;
     }
   
-   #currentLocation{
-        width: 53%;
-        font-size: 85%;
-        margin-bottom: 7%;
-        border-radius: 19px;
-        border: 1px #283829;
-        background-color: rgb(207, 212, 209);
-        color: #000000;
-        font-weight: bold;
-        box-shadow: 4px 4px 10px rgba(70, 68, 68, 0.3);
-        margin-top: 7px;
-        margin-bottom: 7px;
-   }
+    .wrapper{
+        width: 600px;
+        margin: auto;   
+    }
 
-    h6{
-        font-weight: bold;
+   #currentLocation{
+        height: 37px;
+        width: 35px;
+        background-color: slategray;
+        border:none;
+    }
+
+    li{
+        list-style: none;
+        font-size: 18px;
+        margin: 0;
+        text-align:justify;
+    }
+
+    #searchResult{
+        height: 37px;
     }
 
     .searchForm {
         position: relative;
         overflow: hidden;
-        padding-bottom: 3%
+        padding-bottom: 10px
     }
 
     .searchBar {
@@ -43,24 +48,27 @@
     }
 
     #searchButton {
-        border-radius: 19px;
-        border: 1px #283829;
-        background-color: rgb(207, 212, 209);
-        color: #000000;
-        font-weight: bold;
-        box-shadow: 4px 4px 10px rgba(70, 68, 68, 0.3);
-        margin-top: 7px;
-        margin-bottom: 7px;
-    }
+        height: 37px;
+        width: 50px;
+        background-color: slategray;
+        border: none;
+        padding-right: 13px;
+        margin-right: 13px;
+        font-size: white;}
+        
 
-    #temperature{
-        font-size: 137%;
-    }
 
-.img{
-    width: 53%;
-    height: 53%;
+
+
+   
+.IMG {
+     margin-left: 50px;
+    float: left;
+     width:100px ;
+    height: 100px;
 }
+
+
 .img-fluid{
     width: 89%;
     height: 67%;
