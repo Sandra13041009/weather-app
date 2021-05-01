@@ -14,6 +14,7 @@
     .wrapper{
         width: 600px;
         margin: auto;   
+          font-family: 'Nunito Sans', sans-serif;
     }
 
    #currentLocation{
@@ -27,12 +28,7 @@
         float: right;
     }
 
-    li{
-        list-style: none;
-        font-size: 18px;
-        margin: 0;
-        text-align:justify;
-    }
+ 
 
     #searchResult{
         height: 37px;
@@ -60,17 +56,29 @@
         font-size: white;
     }
         
+    .IMG {
+    padding: 0;
+        width:100px ;
+        height: 100px;
+        margin-left: 30px;
+    }
+    
+    
 
-
-
-
-   
-.IMG {
-     margin-left: 50px;
-    float: left;
-     width:100px ;
-    height: 100px;
+.units a{
+    text-decoration: none;
+    font-size: smaller;
+    margin: 0 0 0 -50;
 }
+
+
+
+  .tomorrow-txt{
+          }
+
+
+
+
 
 
 .img-fluid{
