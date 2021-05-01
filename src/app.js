@@ -35,6 +35,8 @@ function displayWeather(response) {
   cityHeading.innerHTML = response.data.name;
   let showTemp = document.querySelector("#resultTemperature");
   showTemp.innerHTML = `${Math.round(response.data.main.temp)} °C`;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 let searchInput = document.querySelector("#searchButton");
 searchInput.addEventListener("click", getTemp);
