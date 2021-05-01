@@ -23,40 +23,35 @@
 
         <div class="row">
             <div class="col-4"> 
+                Your local time:
                 <h6 style="font-weight: bold"></h6>  
-            </div><!--col-->
 
-            <div class="col-7">
-                <div class="input-group" id="searchForm">     
-                    <input type="search" class="form-control rounded" class="searchBar" autofocus="on" placeholder="Type your city here" aria-label="Search" aria-describedby="search-addon" id="searchResult"/>
-                    <button id="searchButton" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
-                    <button type="button" id="currentLocation"><i class="fas fa-street-view"></i></button>
-                </div><!--input-group-->
+
             </div><!--col-->
-    </div><!--row-->
+                <div class="col-7">
+                    <div class="input-group" id="searchForm">     
+                        <input type="search" class="form-control rounded" class="searchBar" autofocus="on" placeholder="Type your city here" aria-label="Search" aria-describedby="search-addon" id="searchResult"/>
+                        <button id="searchButton" type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        <button type="button" id="currentLocation"><i class="fas fa-street-view"></i></button>
+                    </div><!--input-group-->
+                </div><!--col-->
+        </div><!--row-->
   
         <div class="row">
             <div class="col-2" style="padding: 0; margin-right: 20px;">
-                        <img src="images/sunny.png" alt="Clear" class="IMG" />
+                <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="Clear" class="IMG" id="icon" />
             </div>
 
             <div class="col-4" style="padding: 0px 15px;">
                 <div class="temperature" style="text-transform: capitalize;">
                     <strong><p id="resultCity" style="margin-bottom: 0; margin-top: 20px; font-size: 23px; padding: 0;">Paris</p></strong>
-                       
                     <span class="units" style="font-size: 91%; float:right ; margin-left: -70px;"> (<a href="#" id="Fahrenheit">°F</a>|<a href="#"id="Celsius">°C</a>)</span> 
-                        
                     <strong><span id="resultTemperature" class="resultTemp" style="margin-bottom: 0; padding-right: 0;">13°C</span></strong>
-                                (<a href="#" id="Fahrenheit">°F</a>|<a href="#" id="Celsius">°C</a>)</span>
+                         (<a href="#" id="Fahrenheit">°F</a>|<a href="#" id="Celsius">°C</a>)</span>
                         
-            
-                        <p id="description">Clear Sky</p>
-
-
-                </div>
-</div>
-
-
+                    <p id="description">Clear Sky</p>
+                </div><!--temperature-->
+            </div><!--col-->
 
 <div class="col-4" style="padding: 0px 15px">
 <div class="tomorrow-txt" style="padding-top: 30px;">

@@ -37,9 +37,16 @@ function displayWeather(response) {
   showTemp.innerHTML = `${Math.round(response.data.main.temp)} °C`;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 let searchInput = document.querySelector("#searchButton");
 searchInput.addEventListener("click", getTemp);
+
+
+
+http://openweathermap.org/img/wn/10d@2x.png
+
 
 
 //3
@@ -59,3 +66,4 @@ function showGPS(event) {
 }
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", showGPS);
+
