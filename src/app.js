@@ -95,3 +95,4 @@ celsius.addEventListener("click", showCelsiusTemperature);
 
 
 let celsiusTemp = null;
+
