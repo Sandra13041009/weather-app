@@ -1,4 +1,4 @@
-//1
+//Day and time settings
 let currentTime = new Date();
 
 let h6 = document.querySelector("h6");
@@ -33,10 +33,19 @@ function getTemp(event) {
 function displayWeather(response) {
   let cityHeading = document.querySelector("#resultCity");
   cityHeading.innerHTML = response.data.name;
+  
   let showTemp = document.querySelector("#resultTemperature");
   showTemp.innerHTML = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML =response.data.main.humidity;
+    
+   let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+    
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
@@ -96,3 +105,18 @@ celsius.addEventListener("click", showCelsiusTemperature);
 
 let celsiusTemp = null;
 
+function citySearch(event) {
+  event.preventDefault("Detroit");
+  city = document.querySelector("#searchResult");
+  let cityHeading = document.querySelector("#resultCity");
+  cityHeading.innerHTML = `${city.value}`;
+  searchCity(city.value);
+}
+function searchCity(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "98612a22cb9a3addb8d9134910c82826";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+searchCity("Detroit");
