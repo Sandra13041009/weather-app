@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 //Day and time settings
 let currentTime = new Date();
 let h6 = document.querySelector("h6");
@@ -90,3 +91,36 @@ fahrenheit.addEventListener("click", showFahrenheitTemperature);
 let celsius = document.querySelector("#Celsius");
 celsius.addEventListener("click", showCelsiusTemperature);
 let celsiusTemp = null;
+
+//forecast
+function displayForecast() {
+	let forecastElement = document.querySelector("#forecast");
+
+	let forecastHTML = `<div class="row">`;
+	let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+	days.forEach(function (day) {
+		forecastHTML =
+		forecastHTML +
+		`
+            <div class="col-2">
+                <span>${day}</span><br>
+                <span class="tempMax">9</span>°  <span class="tempMin">(8</span>°)
+				<img src="http://openweathermap.org/img/wn/01d@2x.png" class="img-fluid">
+            </div>
+`;
+	});
+	forecastHTML = forecastHTML + `</div>`;
+	forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
+
+
+
+
+
+
+
+
+
