@@ -111,19 +111,21 @@ displayForecast();
 
 function displayForecast(response) {
 
-	console.log(response.data.daily);
+	let forecast = response.data.daily;
+
 	let forecastElement = document.querySelector("#forecast");
 
 	let forecastHTML = `<div class="row">`;
-	let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
-	days.forEach(function (day) {
+
+	forecast.forEach(function (forecastDay, index) {
+		if (index < 6) 
 		forecastHTML =
 		forecastHTML +
 		`
             <div class="col-2">
-                <span>${day}</span><br>
-                <span class="tempMax">9</span>°  <span class="tempMin">(8</span>°)
-				<img src="http://openweathermap.org/img/wn/01d@2x.png" class="img-fluid">
+                <span>${formatDay(forecastDay.dt)}</span><br>
+                <strong><span class="tempMax">${Math.round(forecastDay.temp.max)}</span>°  <span class="tempMin">(${Math.round(forecastDay.temp.min)}</span>°)</strong>
+				<img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" class="img-fluid" width="42">
             </div>
 `;
 	});
@@ -131,8 +133,15 @@ function displayForecast(response) {
 	forecastElement.innerHTML = forecastHTML;
 }
 
+function formatDay(timestamp) {
+	let date = new Date(timestamp*1000);
+	let day = date.getDay();
 
+	let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+	return days[day];
+
+}
 
 
 
