@@ -37,42 +37,39 @@
                 </div><!--col-->
         </div><!--row-->
   
-        <div class="row" style="margin-top: 15px;">
-            <div class="col-2">
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Clear" class="IMG" id="icon" style="margin-top: 9px;" />
+        <div class="row ">
+            <div class="col-3">
+                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Clear" class="IMG" id="icon" />
             </div>
 
-            <div class="col-4" style="padding: 0px 15px;">
+            <div class="col-4  justify-content-center  align-items-center">
                 <div class="temperature">
-                    <strong><p id="resultCity" style="margin-bottom: 0; margin-top: 20px; font-size: 23px; padding: 0;"></p></strong>
-                    <strong><span id="resultTemperature" class="resultTemp" style="margin-bottom: 0; padding-right: 0; font-size: 21px;"></span>°C</strong>
+                    <strong><p id="resultCity"></p></strong>
+                    <strong><span id="resultTemperature" class="resultTemp" style="font-size: 21px; line-height: 3px;"></span></strong>
                          <small><a href="#" id="Fahrenheit" class="link">°F</a>|<a href="#" id="Celsius" class="link">°C</a></span></small>
                         
-                    <p id="description" style="text-transform: capitalize;">Clear Sky</p>
-                    <p style="margin-bottom: 2px;">Humidity <span id="humidity">3</span>%</p>
-                    <p style="line-height: 5px;">Wind <span id="wind">5</span> km/h</p>
+                    <strong><p id="description" style="text-transform: capitalize;"></p> </strong>
+                    
+                    <p>Humidity <span id="humidity"></span>%
+                        <br>
+                        Wind <span id="wind"></span> km/h</p>
 
-               
                 </div><!--temperature-->
             </div><!--col-->
-
-<div class="col-4" style="padding: 0px 15px">
-<div class="tomorrow-txt" style="padding-top: 30px;">
-    <strong>Tomorrow 7°C</strong>
-    <img src="" class="IMG">
-</div><!--tomorrow-txt-->
-</div><!--col-->
-</div>
+            
+            <div class="col-4" id="tomorrow"></div>
+        </div><!--row-->
 
 
-<div class="forecast" id="forecast"></div>
+            <div class="forecast" id="forecast"></div>
+        </div><!--row-->
 
 
 
-</div>
     <small class="link"><a href="https://github.com/Sandra13041009/Weather_App" target="_blank">Open-source code</a>
             by Sandra Horn</small>
-    </div><!--wrapper-->
+    </div>
+
     
     <script src="src/app.js"></script>
 </body>
