@@ -9,7 +9,15 @@ let minutes = ('0' + currentTime.getMinutes()).slice(-2);
 h6.innerHTML = `${day}, ${hours}:${minutes}`;
 
 //Getting weather data
-
+function getTemp(event) {
+	event.preventDefault();
+	let apiKey = "98612a22cb9a3addb8d9134910c82826";
+	let city = document.querySelector("#searchResult").value;
+	let units = "metric";
+	let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+	let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=${units}`;
+	axios.get(apiUrl).then(displayWeather);
+}
 
 
 function displayWeather(response) {
@@ -30,6 +38,8 @@ function displayWeather(response) {
 	getForecast(response.data.coord);
 
 }
+let searchInput = document.querySelector("#searchButton");
+searchInput.addEventListener("click", getTemp);
 
 
 //Current location
