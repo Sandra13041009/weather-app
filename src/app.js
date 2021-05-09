@@ -106,12 +106,15 @@ function getForecast(coordinates) {
 
 	axios.get(apiUrl).then(displayForecast);
 
-	axios.get(apiUrl).then(displayTodayForecast);
+	axios.get(apiUrl).then(displayTomorrowForecast);
 }
 
 displayForecast();
 
-displayTodayForecast();
+displayTomorrowForecast();
+
+
+//Forecast Week
 
 function displayForecast(response) {
 
@@ -148,7 +151,8 @@ function formatDay(timestamp) {
 
 }
 
-function displayTodayForecast(response) {
+//Forecast 1 Day
+function displayTomorrowForecast(response) {
 
 	let forecast = response.data.daily;
 
